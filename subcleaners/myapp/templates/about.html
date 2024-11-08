@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubCleaners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <a href="{% url 'help' %}">Help</a>
+            <a href="{% url 'quotes' %}">Quotes</a>
+            <a href="{% url 'booknow' %}">Book Now</a>
+        </nav>
+    </header>
+
+    <div id="About">
+        <div id="AboutBackground">
+            <h1>ABOUT SubCleaners</h1>
+            <ul>
+                <li class="animate-item">We view each contact with you as an opportunity to build a customer service brand</li>
+                <li class="animate-item">We think "fun and outgoing" agents are just as important as passing our background checks</li>
+                <li class="animate-item">We want to WOW you each time, and we throw in some cool surprises to do so</li>
+                <li class="animate-item">100% Money Back Guarantee: If you're not happy we come back to make it right</li>
+                <li class="animate-item">We communicate honestly and openly-no upsells or hidden pricing</li>
+            </ul>
+        </div>
+    </div>    
+
+    <div class="info-container">
+        <div class="step">
+            <i class="fas fa-calendar-alt"></i> 
+            <h3>Book in 60s</h3>
+            <p>Select the date and time you'd like your professional to show up.</p>
+        </div>
+        <div class="step">
+            <i class="fas fa-credit-card"></i> 
+            <h3>Pay Online</h3>
+            <p>Seamless online payments. No cash!</p>
+        </div>
+
+        <div class="step">
+            <i class="fas fa-broom"></i>
+            <h3>Clean</h3>
+            <p>A certified cleaner comes over and cleans your place.</p>
+        </div>
+    </div>
+
+    <div id="OurValues">
+        <div class="values">
+            <i class="fas fa-clock"></i>
+            <h1>SAVES YOU TIME</h1>
+            <p>SubCleaners helps you live smarter, giving you time to focus on what's most imporant</p>
+        </div>
+        <div class="values">
+            <i class="fas fa-shield-alt"></i>
+            <h1>SAFTEY FIRST</h1>
+            <p>We rigorously evaluate all of our Cleaners, who undergo identity checks as well as in-person interviews</p>
+        </div>
+        <div class="values">
+            <i class="fas fa-star"></i>
+            <h1>ONLY THE BEST QUALITY</h1>
+            <p>Our skilled professionals go above and beyond on every job Cleaners are rated and reviewed after each task</p>
+        </div>
+        <div class="values">
+            <i class="fas fa-hands-helping"></i>
+            <h1>EASY TO GET HELP</h1>
+            <p>Select your ZIP code, number of bedrooms and bathrooms, date and relax while we take care of your home</p>
+        </div>
+        <div class="values">
+            <i class="fas fa-comments"></i>
+            <h1>SEAMLESS COMMUNICATION</h1>
+            <p>Online communication makes it easy for you to stay in touch with your Cleaners</p>
+        </div>
+        <div class="values">
+            <i class="fas fa-credit-card"></i>
+            <h1>CASH FREE PAYMENT</h1>
+            <p>Pay securely online only when the cleaning is complete</p>
+        </div>
+    </div>
+
+    <div id="Reviews">
+        <h1>See What Customers Are Saying!</h1>
+        <div class="carousel-wrapper">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <p>"Fantastic service! My home has never looked this clean. Friendly staff and efficient work. Highly recommend!"</p>
+                    <div class="review-details">
+                        <span class="reviewer-name">Emily C.</span>
+                        <div class="star-rating">
+                            ★★★★☆ 
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <p>"They exceeded my expectations. Every corner was spotless, and they were quick and professional!"</p>
+                    <div class="review-details">
+                        <span class="reviewer-name">Michael J.</span>
+                        <div class="star-rating">
+                            ★★★★★ 
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <p>"Amazing attention to detail! The team left my house sparkling. I’ll definitely be using them again."</p>
+                    <div class="review-details">
+                        <span class="reviewer-name">Sarah T.</span>
+                        <div class="star-rating">
+                            ★★★★★ 
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <p>"Super reliable and thorough. The cleaning crew did an outstanding job, and my place feels brand new."</p>
+                    <div class="review-details">
+                        <span class="reviewer-name">David R.</span>
+                        <div class="star-rating">
+                            ★★★★★ 
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <p>"Impressive work! They were prompt, polite, and made everything shine. Best cleaning service I’ve used!"</p>
+                    <div class="review-details">
+                        <span class="reviewer-name">Jessica N.</span>
+                        <div class="star-rating">
+                            ★★★★★ 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="AboutReviewsBackground"></div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are a dedicated cleaning service providing top-notch cleaning solutions for homes and businesses.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'booknow' %}">Book</a></li>
+                </ul>
+            </div>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: cleans@subcleaners.com</p>
+                <p>Phone: +1(631) 944-2697</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SubCleaners. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

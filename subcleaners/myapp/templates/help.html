@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubCleaners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <a href="{% url 'help' %}">Help</a>
+            <a href="{% url 'quotes' %}">Quotes</a>
+            <a href="{% url 'booknow' %}">Book Now</a>
+        </nav>
+    </header>
+
+    <div class="Help">
+        <div id="HelpBackground"></div>
+        <div class="faq-header">
+            <h1>Help and FAQs</h1>
+        </div>
+        <div class="faq-content">
+            <div class="faq-box">
+                <h2>GENERAL CLEANING SERVICES</h2>
+                <div class="faq-question">What types of cleaning services do you offer?</div>
+                <div class="faq-answer" style="max-height: 0;">We provide standard, deep, and specialized cleaning for residential and commercial spaces, including move-in/move-out, post-construction, and customized services.</div>
+    
+                <div class="faq-question">Do you bring your own cleaning supplies and equipment?</div>
+                <div class="faq-answer" style="max-height: 0;">Yes, our cleaners bring eco-friendly supplies and professional-grade equipment. However, we can use client-provided products upon request.</div>
+    
+                <div class="faq-question">How do you handle fragile or valuable items?</div>
+                <div class="faq-answer" style="max-height: 0;">We treat all items with care and avoid touching fragile or high-value objects without prior consent. Please notify us of any special requirements.</div>
+    
+                <div class="faq-question">Are your cleaners background-checked and trained?</div>
+                <div class="faq-answer" style="max-height: 0;">Yes, all our cleaners are background-checked, professionally trained, and insured to ensure a safe and high-quality experience.</div>
+    
+                <div class="faq-question">How can I reschedule or cancel my appointment?</div>
+                <div class="faq-answer" style="max-height: 0;">You can easily reschedule or cancel by calling or emailing us at least 24 hours in advance to avoid any rescheduling fees.</div>
+    
+                <div class="faq-question">What areas do you serve?</div>
+                <div class="faq-answer" style="max-height: 0;">We currently serve all neighborhoods in Queens and select areas in New York City. Please contact us to confirm your location.
+                    honestly that is all we need covers everything and simple</div>
+            </div>
+            <div class="faq-box">
+                <h2>TRUST AND SAFETY</h2>
+                <div class="faq-question">Can I trust my cleaning professional?</div>
+                <div class="faq-answer" style="max-height: 0;">All of our folks are interviewed and pass a nationwide detailed background check. Only about 10% of the people that apply end up working as a Sub Cleaners certified cleaner.</div>
+    
+                <div class="faq-question">What happens if something goes wrong during my appointment?</div>
+                <div class="faq-answer" style="max-height: 0;">If something goes wrong, we’re here to make it right. Please let us know right away and we’ll be there to take care of it. That’s our promise to you!</div>
+    
+                <div class="faq-question">Is my billing information kept safe and secure?</div>
+                <div class="faq-answer" style="max-height: 0;">We have three levels of security in place. First off, our booking page is protected by extended validation SSL. Secondly, our booking form has its own layer of 256-bit security. Third, credit card transactions are processed by Stripe and are layered on their own 256 security protocol. In addition, no credit card numbers are stored in our system (only a token that allows us to charge the card). Rest assured, we take security very seriously.</div>
+    
+                <div class="faq-question">Do the cleaning professionals go through a background check?</div>
+                <div class="faq-answer" style="max-height: 0;">Yes, they do. We run a detailed nationwide background check on all applicants as the last step in our pre-screening process.</div>
+    
+                <div class="faq-question">What is your 100% satisfaction guarantee policy?</div>
+                <div class="faq-answer" style="max-height: 0;">If you’re not content with your cleaning, we will come out and re-clean (within a 7-day window). If you still don’t think we did a good enough job to recommend us to your friends, we’ll refund your money.</div>
+    
+                <div class="faq-question">What is your refund policy?</div>
+                <div class="faq-answer" style="max-height: 0;">We aim for complete satisfaction. If you’re not happy with any part of the service, contact us within 24 hours, and we’ll re-clean the area at no additional cost.</div>
+            </div>
+            
+            <div class="faq-box">
+                <h2>PRICING AND POLICIES</h2>
+                <div class="faq-question">How are cleaning prices determined?</div>
+                <div class="faq-answer" style="max-height: 0;">Our prices are based on the size of your home (square footage or number of bedrooms and bathrooms), the type of service, and any requested add-ons.</div>
+    
+                <div class="faq-question">Are there any additional fees for special requests?</div>
+                <div class="faq-answer" style="max-height: 0;">Yes, some special services like inside fridge, oven cleaning, or laundry may incur additional fees. Contact us for an exact quote based on your needs.</div>
+    
+                <div class="faq-question">Do you offer recurring cleaning discounts?</div>
+                <div class="faq-answer" style="max-height: 0;">Yes, we offer discounts for weekly, bi-weekly, and monthly recurring services. Contact us for our latest packages and pricing options.</div>
+    
+                <div class="faq-question">What forms of payment do you accept?</div>
+                <div class="faq-answer" style="max-height: 0;">We accept all major credit/debit cards, online payments, and bank transfers. Payment is typically processed after the service is completed.</div>
+    
+                <div class="faq-question">Is tipping required or expected?</div>
+                <div class="faq-answer" style="max-height: 0;">Tips are appreciated but not required. If you’re satisfied with the service, a tip is a nice way to show appreciation to our cleaners.</div>
+    
+                <div class="faq-question">What is your refund or satisfaction guarantee policy?</div>
+                <div class="faq-answer" style="max-height: 0;">We aim for complete satisfaction. If you’re not happy with any part of the service, contact us within 24 hours, and we’ll re-clean the area at no additional cost.</div>
+            </div>
+    
+            <div class="faq-box">
+                <h2>COMMON CLEANING QUESTIONS</h2>
+                
+                <div class="faq-question">Do I need to be home during the cleaning?</div>
+                <div class="faq-answer" style="max-height: 0;">You do not need to be home during the cleaning. However, we ask that you provide access to the property and let us know if there are any special instructions or concerns.</div>
+            
+                <div class="faq-question">What should I do before the cleaning team arrives?</div>
+                <div class="faq-answer" style="max-height: 0;">To help us clean more efficiently, we recommend picking up any personal items from the floors and countertops. This ensures our cleaners can focus on the main tasks.</div>
+            
+                <div class="faq-question">Can I request specific cleaning tasks?</div>
+                <div class="faq-answer" style="max-height: 0;">Yes! You can add specific requests to your booking form or let the cleaner know directly. We’ll do our best to accommodate any special cleaning tasks.</div>
+            
+                <div class="faq-question">What happens if I'm not satisfied with the cleaning?</div>
+                <div class="faq-answer" style="max-height: 0;">If you’re not completely satisfied with the cleaning, contact us within 24 hours, and we’ll send someone to resolve the issue at no extra cost.</div>
+            
+                <div class="faq-question">How long does the cleaning take?</div>
+                <div class="faq-answer" style="max-height: 0;">The time it takes depends on the size of your space and the type of cleaning required. We can give you an estimated duration when you book your appointment.</div>
+            
+                <div class="faq-question">Are there any items or surfaces you won't clean?</div>
+                <div class="faq-answer" style="max-height: 0;">For safety reasons, we do not clean certain areas such as high windows and outdoor gutters. Please let us know if you have specific concerns.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are a dedicated cleaning service providing top-notch cleaning solutions for homes and businesses.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'booknow' %}">Book</a></li>
+                </ul>
+            </div>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: cleans@subcleaners.com</p>
+                <p>Phone: +1(631) 944-2697</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SubCleaners. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

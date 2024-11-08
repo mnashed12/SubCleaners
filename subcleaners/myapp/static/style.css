@@ -1,0 +1,1073 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    background: none;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 28px;
+    position:relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    pointer-events: cursor;
+    background-color: rgb(240, 239, 234);
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content:space-evenly;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #336375;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: darkblue;
+    opacity: 0.5;
+    text-decoration: underline;
+}
+
+.navbar-logo {
+    height: 50px; 
+    width: auto; 
+    vertical-align: middle; 
+    border-radius: 24px;
+}
+
+#Home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: url(background1.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+#Home h1 {
+    font-size: 4rem;
+    padding-top: 48px;
+    color: white;
+}
+
+#cleaningServiceForm {
+    width: 100%;
+    display: grid;
+    border-radius: 4px;
+    font-size: 24px;
+    gap: 5px;
+}
+
+.form-container {
+    background-color: rgba(241, 237, 255, 0.3);
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 8px; 
+    width: 100%;
+    max-width: 700px; 
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: grid;
+    opacity: 90%;
+}
+
+.form-field {
+    display: flex; 
+    flex-direction: column; 
+    margin: 10px 0; 
+    padding: 5px;
+    color: white;
+}
+
+label {
+    opacity: 1; 
+    margin-bottom: 2px;
+}
+
+.form-field label {
+    font-size: 24px;
+    color: rgb(94, 94, 94);
+}
+
+input, select {
+    padding: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width: 100%; 
+    font-size: 16px; 
+    box-sizing: border-box;
+    height: 50px; 
+}
+
+#home-button {
+    grid-column: span 2; 
+    padding: 10px;
+    background-color: blue;
+    color: white; 
+    border: none; 
+    border-radius: 16px; 
+    cursor: pointer; 
+    margin-top: 10px; 
+    font-size: 24px;
+}
+
+#home-button:hover {
+    background-color: #9e8dff; 
+}
+
+#WhyChooseUs {
+    height: 50vh;
+}
+
+#WhyChooseUs h1{
+    text-align: center; 
+    font-size: 2.3rem;
+    color: lightgray;
+    padding-top: 60px;
+    margin:0px;
+}
+#WhyChooseUs h2 {
+    text-align: center; 
+    font-size: 3rem;
+    color: rgb(94, 94, 94);
+    margin:0px;
+}
+
+.info-container {
+    display: flex; 
+    justify-content:center;
+    align-items: center; 
+    flex-wrap: wrap; 
+    margin-top: 60px; 
+    text-align: center;
+    padding: 0px 200px;
+    margin-bottom: 60px;
+}
+
+.step {
+    width: 30%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+.info-container .step i {
+    font-size: 96px; 
+    color: #3498db; 
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+#GetStarted {
+    text-align: center;
+}
+
+#GetStarted h1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+#GetStarted p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+#GetStarted button {
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    font-size: 2rem; 
+    background-color: #1900ff; 
+    color: white; 
+    border: none;
+    border-radius: 24px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+#GetStarted button:hover {
+    background-color: #9e8dff; 
+}
+
+#GetStartedBackground {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%), 
+    url(background2.jpg);
+    background-size: cover;
+    height: 100vh;
+    margin-top: 20px;
+}
+
+#Reviews {
+    text-align: center;
+    background-color: white;
+}
+
+#Reviews h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color:lightblue;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden; 
+    width: 100%;
+}
+
+.carousel-slide {
+    font-size: 2.4rem;
+    color: #333;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 0 0 100%; 
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide p{
+    font-size: 1.6rem;
+}
+
+.review-details {
+    margin-top: 10px; 
+}
+
+.reviewer-name {
+    font-weight: bold; 
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+.star-rating {
+    color: gold; 
+    font-size: 2rem; 
+}
+
+#ReviewsBackground {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%),
+    url(background3.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+#AboutBackground {
+    text-align: center;  
+    background: url(background4.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+}
+
+#About h1 {
+    color: black;
+    font-size: 4rem;
+    margin-top: 0;
+    position: relative;
+    transform: translateY(40px);
+    transition: transform 0.5s ease-in-out; 
+}
+
+#About ul {
+    list-style-type: none; 
+    margin-top: 70px;
+    color: black;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block; 
+    text-align: center;
+    transform: translateX(-120px);
+    padding-left: 0px;
+}
+
+#About li {
+    margin-bottom: 10px;
+    padding-top: 45px;
+    transform: translateX(110px); 
+    transition: transform 0.3s ease; 
+}
+
+#About li:hover {
+    transform: translateX(100px) scale(1.05); 
+    color: #ffffff; 
+}
+
+#OurValues {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #f7f7f7;
+}
+
+.values {
+    display: flex;
+    align-items: center; 
+    flex-direction: row; 
+    width: 45%; 
+    background: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.values i {
+    font-size: 3rem; 
+    color: #007bff; 
+    margin-right: 20px; 
+}
+
+.values h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.values p {
+    font-size: 1.2rem;
+    color: #666666;
+}
+
+#AboutReviewsBackground{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%),
+    url(background6.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+#TellUs {
+    text-align: center;
+}
+
+#TellUs h1{
+    font-size:3rem;
+    padding-top: 120px;
+    color:white;
+    margin-top:0px;
+}
+
+#TellUs h2{
+    font-size: 1rem;
+    color:white;
+}
+
+#TellUsBackground{
+    background: url(background7.jpg);
+    background-position:center;
+    background-size: cover;
+    height:45vh;
+}
+
+#CommercialQuotes {
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#CommercialContainer{
+    background-color: rgb(250, 250, 250);
+}
+
+#userInfoForm{
+    outline: 1px solid lightblue;
+    background-color: white;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: rgb(75, 75, 75);
+}
+
+#CommercialServiceForm h2 {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 0px;
+}
+
+#CommercialServiceForm p {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px; 
+    margin-bottom: 10px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}
+
+textarea {
+    resize: vertical; 
+}
+
+#quotes-button {
+    background-color: rgb(0, 0, 0); 
+    color: white; 
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    width: 20%;
+    border-radius: 0px;
+}
+
+#quotes-button:hover {
+    background-color: darkgray;
+}
+
+#HelpBackground{
+    background: url(bbackground8.jpg);
+    background-position:center;
+    background-size: cover;
+    height:50vh;
+}
+
+#HelpBackground h1{
+    font-size:3rem;
+    color:rgb(53, 53, 53);
+    margin-top: 0px;
+}
+
+.faq-header {
+    display:flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.faq-header h1{
+   font-size: 3rem;
+}
+
+.faq-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:center; 
+    margin: 0 20px;
+    border-top: 2px solid rgb(199, 199, 199);
+}
+
+.faq-box {
+    background: white;
+    border-radius: 5px; 
+    margin: 10px; 
+    padding: 15px; 
+    width: calc(45% - 20px); 
+}
+
+.faq-box h2{
+    text-align: left;
+}
+
+.faq-question {
+    cursor: pointer;
+    margin-top:20px;
+}
+
+.faq-question::before {
+    content: '+ '; 
+    font-size: 20px; 
+    color: lightblue; 
+}
+
+.faq-answer {
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height 0.3s ease; 
+    margin-top:10px;
+    margin-left: 15px;
+    line-height: 25px;
+}
+
+.faq-answer.show {
+    max-height: 200px; 
+}
+
+.faq-question.bold {
+    font-weight: bold; 
+}
+
+.Contact {
+    text-align: center;
+    position: relative; 
+}
+
+#ContactBackground {
+    background: url(background9.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
+
+#ContactBackground p {
+    font-size: 4rem;
+    color: white;
+    margin-top: 0px;
+    transform: translateY(80px);
+}
+
+.contact-form {
+    margin-top: -100px; 
+    margin-bottom: 60px;
+    max-width: 700px; 
+    margin-left: auto;
+    margin-right: auto; 
+    outline: 1px solid lightgray; 
+    outline-offset: 10px; 
+    padding: 20px; 
+    box-shadow: 0 0 0 4px white, 0 0 0 6px lightgray; 
+    background-color: white;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: .8rem;
+}
+
+select, textarea, input[type="email"] {
+    width: 100%; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+#send-button {
+    background-color: rgb(0, 0, 0); 
+    color: white; 
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    width: 20%;
+    border-radius: 0px;
+}
+
+#send-button:hover {
+    background-color: darkgray;
+}
+
+.BookNow {
+    text-align: center;
+}
+
+#BookingBackground {
+    background: url(background9.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
+
+#BookingBackground p {
+    font-size: 3rem;
+    color: white;
+    margin-top: 0px;
+    transform: translateY(80px);
+}
+
+.booking-form {
+    margin-top: -50px; 
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid lightgray;
+    outline-offset: 10px;
+    padding: 20px;
+    box-shadow: 0 0 0 4px white, 0 0 0 6px lightgray;
+    background-color: white;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 0.8rem;
+}
+
+.form-row {
+    display: flex; 
+    justify-content: space-around; 
+    margin-bottom: 20px; 
+}
+
+.form-row input,
+.form-row select {
+    width: calc(48%); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    box-sizing: border-box; 
+}
+
+.form-row input {
+    max-width: 300px; 
+}
+
+textarea {
+    width: 100%; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.extras {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; 
+    justify-items: center; 
+    margin: 20px 0; 
+    padding: 0 20px; 
+}
+
+
+.extras button {
+    background-color: white; 
+    border: 1px solid #ccc; 
+    margin: 10px; 
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100px; 
+}
+
+.extras button span {
+    text-align: center; 
+}
+
+.extras button:hover {
+    background-color: #f0f0f0;
+}
+
+.extras button.selected{
+    background-color: #f0f0f0;
+}
+
+.service-name {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.price {
+    font-size: 0.8rem;
+    color: #007bff; 
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+.extras button{
+    color: rgb(85, 85, 85);
+    font-size: 1.2rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+#calendar-dropdown {
+    transform: translatey(10px);
+}
+
+#one-button, #weekly-button, #biweekly-button, #monthly-button {
+    background-color: #336375;
+    color: white; 
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 4px; 
+    margin-left: 20px; 
+}
+
+#one-button:hover, #weekly-button:hover, #biweekly-button:hover, #monthly-button:hover {
+    color: #336375;
+}
+
+#one-button.selected, #weekly-button.selected, #biweekly-button.selected, #monthly-button.selected {
+    color: #336375;
+}
+
+.totalPrice {
+    position: sticky;
+    bottom: 0; 
+    background-color: white; 
+    padding: 10px;
+    border-top: 1px solid lightgray;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#checkout-button {
+    background-color: #336375;
+    color: white; 
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 4px; 
+    margin-left: 20px; 
+}
+
+#checkout-button:hover {
+    background-color: #1e3a44;
+}
+
+#checkout-button.selected {
+    background-color: #1e3a44;
+}
+
+#footer {
+    background-color: rgb(240, 239, 234);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.footer-section p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-section a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-section ul li a {
+    font-size: 14px;
+}
+
+.footer-section a:hover {
+    color: #007BFF;
+}
+
+
+
+@media (max-width: 1499) and (min-width: 1200px) {
+    .faq-content{
+        margin-left: 0px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    #About {
+        max-width: 100%;
+    }
+    #AboutBackground ul{
+        padding-left: 0px;
+    }
+    #OurValues .values {
+        width: 100%;
+    }
+    .info-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+/*chromebook 768-1080*/
+@media (max-width: 1199px) and (min-width: 992px) {
+    .navbar a {
+        font-size: 18px;
+    }
+    #Home h1 {
+        font-size: 3.5rem;
+    }
+    #userInfoForm {
+        margin-bottom: 70px;
+    }
+    #GetStarted{
+        margin-top: 70px;
+    }
+    #About li{
+        font-size: 1.5rem;
+    }
+    #AboutBackground ul{
+        padding-left: 0px;
+    }
+    #OurValues .values {
+        width: 100%;
+    }
+    #OurValues .values h1{
+        font-size: 14px;
+    }
+    #OurValues .values p{
+        font-size: 12px;
+    }
+    .info-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+/*Tablet 1024 portrait 1366 landscape*/
+@media (max-width: 991px) and (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+    }
+    #Home h1 {
+        font-size: 3rem;
+    }
+
+    #userInfoForm {
+        margin-bottom: 75px;
+    }
+    #GetStarted{
+        margin-top: 80px;
+    }
+
+    #About li{
+        font-size: 1.5rem;
+    }
+    #AboutBackground ul{
+        padding-left: 0px;
+    }
+    #OurValues .values {
+        width: 100%;
+    }
+    #OurValues .values {
+        width: 90%;
+    }
+    #OurValues .values h1{
+        font-size: 12px;
+    }
+    #OurValues .values p{
+        font-size: 10px;
+    }
+    .info-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+/*phones 640 to 854*/
+@media (max-width: 767px) and (min-width: 576px) {
+    .navbar {
+        flex-direction: row;
+    }
+    #Home h1 {
+        font-size: 2.5rem;
+    }
+
+    #userInfoForm {
+        margin-bottom: 90px;
+    }
+    #GetStarted{
+        margin-top: 280px;
+    }
+    #About li{
+        font-size: 1.1rem;
+    }
+    #AboutBackground ul{
+        padding-left: 0px;
+    }
+    #OurValues .values {
+        width: 100%;
+    }
+    #OurValues .values h1{
+        font-size: 12px;
+    }
+    #OurValues .values p{
+        font-size: 10px;
+    }
+    .info-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+/*phones 568(SE) to 812(X)*/
+@media (max-width: 575px) {
+    .navbar {
+        flex-direction: row;
+    }
+    #Home h1 {
+        font-size: 2rem;
+    }
+
+    #userInfoForm {
+        margin-bottom: 90px;
+    }
+    #GetStarted{
+        margin-top: 280px;
+    }
+    #About li{
+        font-size: 1rem;
+    }
+    #AboutBackground ul{
+        padding-left: 0px;
+    }
+    #OurValues .values {
+        width: 100%;
+    }
+    #OurValues .values {
+        width: 90%;
+    }
+    #OurValues .values h1{
+        font-size: 14px;
+    }
+    #OurValues .values p{
+        font-size: 12px;
+    }
+    .footer-section h3, .footer-section ul li {
+        font-size: 1rem;
+    }
+    .info-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+/*small phones*/
+@media (max-width: 360px) {
+    .navbar a {
+        font-size: 12px; 
+        padding: 8px 10px; 
+    }
+    .navbar {
+        padding: 5px; 
+    }
+    #OurValues .values {
+        width: 90%;
+    }
+    #OurValues .values h1{
+        font-size: 6px;
+    }
+    #OurValues .values p{
+        font-size: 4px;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubCleaners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <a href="{% url 'help' %}">Help</a>
+            <a href="{% url 'quotes' %}">Quotes</a>
+            <a href="{% url 'booknow' %}">Book Now</a>
+        </nav>
+    </header>
+
+    <div id="TellUsBackground">
+        <div id="TellUs">
+            <h1>TELL US ABOUT YOUR SPACE</h1>
+            <h2>We don't share your personal information with anyone.</h2>
+        </div>
+    </div>
+    <div class="BookNow">
+        <div class="booking-form">
+            <h1>Let's Get Started!</h1>
+            <h2>Please provide your details below:</h2>
+            <form method="POST" action="{% url 'quotes' %}">
+                {% csrf_token %}
+                <div class="form-row">
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                </div>
+    
+                <div class="form-row">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
+    
+                <h1>Address Details</h1>
+                <h2>Where would you like the service?</h2>
+                <div class="form-row">
+                    <input type="text" id="street" name="street" placeholder="Street Address" required>
+                    <input type="text" id="apt" name="apt" placeholder="Apt #" optional>
+                </div>
+                <div class="form-row">
+                    <input type="text" id="city" name="city" placeholder="City" required>
+                    <input type="text" id="state" name="state" placeholder="State" required>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code" required>
+                </div>
+    
+                <h1>Notes</h1>
+                <h2>Any additional notes or requests?</h2>
+                <textarea id="notes" name="notes" rows="4" placeholder="Write your notes here..."></textarea>
+    
+                <button type="submit" id="quotes-button">Send</button>
+            </form>
+        </div>
+    </div>    
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are a dedicated cleaning service providing top-notch cleaning solutions for homes and businesses.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'booknow' %}">Book</a></li>
+                </ul>
+            </div>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: cleans@subcleaners.com</p>
+                <p>Phone: +1(631) 944-2697</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SubCleaners. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

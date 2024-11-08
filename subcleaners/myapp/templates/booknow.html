@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubCleaners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <a href="{% url 'help' %}">Help</a>
+            <a href="{% url 'quotes' %}">Quotes</a>
+            <a href="{% url 'booknow' %}">Book Now</a>
+        </nav>
+    </header>
+
+    <div class="BookNow">
+        <div id="BookingBackground">
+            <p><strong>BOOK YOUR SERVICE</strong></p>
+        </div>
+    
+        <div class="booking-form">
+            <h1>Contact Information</h1>
+            <h2>The information will be used to contact you about your service</h2>
+    
+            <form id="bookingForm" method="POST" action="https://formsubmit.co/cleans@subcleaners.com">  {% comment "Replace with Marks subcleaners email" %}{% endcomment %}
+                <input type="hidden" name="_subject" value="New Booking Submission">
+                <input type="hidden" name="_next" value="http://127.0.0.1:8000/">
+                <input type="hidden" name="_captcha" value="false"> 
+                {% csrf_token %}
+    
+                <div class="form-row">
+                    <input type="text" id="firstname" name="firstName" placeholder="First Name" value="{{ first_name }}" required>
+                    <input type="text" id="lastname" name="lastName" placeholder="Last Name" value="{{ last_name }}" required>
+                </div>
+    
+                <div class="form-row">
+                    <input type="email" id="email" name="email" placeholder="Email" value="{{ email }}" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" value="{{ phone }}" required>
+                </div>
+    
+                <h1>Service Address</h1>
+                <h2>Where would you like us to clean?</h2>
+                <div class="form-row">
+                    <input type="text" id="street" name="street" placeholder="Street Address" required>
+                    <input type="text" id="apt" name="apt" placeholder="Apt #" optional>
+                </div>
+                <div class="form-row">
+                    <input type="text" id="city" name="city" placeholder="City" required>
+                    <input type="text" id="state" name="state" placeholder="State" required>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code" required>
+                </div>
+    
+                <h1>Choose Your Services</h1>
+                <h2>Tell us about your home</h2>
+                <div class="form-row">
+                    <select id="bedroom-dropdown" name="bedrooms">
+                        <option value="1">1 Bedroom</option>
+                        <option value="2">2 Bedroom</option>
+                        <option value="3">3 Bedroom</option>
+                        <option value="4">4 Bedroom</option>
+                        <option value="5">5 Bedroom</option>
+                    </select>
+                    <select id="bathroom-dropdown" name="bathrooms">
+                        <option value="1">1 Bathroom</option>
+                        <option value="2">2 Bathroom</option>
+                        <option value="3">3 Bathroom</option>
+                        <option value="4">4 Bathroom</option>
+                        <option value="5">5 Bathroom</option>
+                    </select>
+                </div>
+    
+                <h1>Select Extras</h1>
+                <h2>Add upgrades to your service</h2>
+                <div class="extras">
+                    <label>
+                        <input type="checkbox" name="extras" value="fridge">
+                        <span>Fridge</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="oven">
+                        <span>Oven</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="deepCleaning">
+                        <span>Deep Cleaning</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="interiorWindows">
+                        <span>Interior Windows</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="walls">
+                        <span>Walls</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="moveInOut">
+                        <span>Move-in/Out</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="loadOfLaundry">
+                        <span>Load of Laundry</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extras" value="insideCabinets">
+                        <span>Inside Cabinets</span>
+                    </label>
+                </div>
+    
+                <h1>When would you like us to come?</h1>
+                <div class="form-row">
+                    <input type="date" id="calendar-dropdown" name="date" required>
+                    <label for="time-dropdown"></label>
+                    <select id="time-dropdown" name="time" required>
+                    </select>
+                </div>
+    
+                <h1>How Often?</h1>
+                <h2>It's all about matching you with the perfect cleaner for your home. Scheduling is flexible. Cancel or reschedule anytime.</h2>
+                <button type="button" id="one-button">One Time</button>
+                <button type="button" id="weekly-button">Weekly</button>
+                <button type="button" id="biweekly-button">Bi-weekly</button>
+                <button type="button" id="monthly-button">Monthly</button>
+    
+                <h1>Notes</h1>
+                <h2>Any additional notes or requests?</h2>
+                <textarea id="notes" name="notes" rows="4" placeholder="Write your notes here..."></textarea>
+                
+                <div class="totalPrice" id="totalPrice">
+                    Total Price: <span id="price">$0</span>
+                    <button type="submit" id="checkout-button">Checkout</button>
+                </div>
+            </form>
+        </div>
+    </div>    
+    
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are a dedicated cleaning service providing top-notch cleaning solutions for homes and businesses.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'booknow' %}">Book</a></li>
+                </ul>
+            </div>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: cleans@subcleaners.com</p>
+                <p>Phone: +1(631) 944-2697</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SubCleaners. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

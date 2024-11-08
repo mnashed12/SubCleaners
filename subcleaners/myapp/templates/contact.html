@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubCleaners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <a href="{% url 'help' %}">Help</a>
+            <a href="{% url 'quotes' %}">Quotes</a>
+            <a href="{% url 'booknow' %}">Book Now</a>
+        </nav>
+    </header>
+
+    <div class="Contact">
+        <div id="ContactBackground">
+            <p><strong>HAVE QUESTIONS?<br>WE'VE GOT ANSWERS</strong></p>
+        </div>
+    
+        <div class="contact-form">
+            <h1>What do you need help with?</h1>
+            <h2>This helps us make sure you get the right answers as fast as possible.</h2>
+            
+            <form method="POST" action="{% url 'contact' %}">
+                {% csrf_token %} <!-- CSRF token for security -->
+
+                <label for="inquiry-dropdown">Select Inquiry Type:</label>
+                <select id="inquiry-dropdown" name="inquiry_type" required>
+                    <option value="general">I have a question before I book</option>
+                    <option value="support">I have a question about my payment</option>
+                    <option value="feedback">I would like to change my booking</option>
+                    <option value="other">I am confused about how something works</option>
+                    <option value="comment">I have a customer service comment</option>
+                    <option value="other">Other</option>
+                </select>
+        
+                <h1>What is your question, comment, or issue?</h1>
+                <h2>Give us as much detail as you can. The more we know, the better we can help you.</h2>
+                <textarea name="message" id="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+                <h1>What's your email address?</h1>
+                <h2>We need this so we can get back to you. Please double check that it's right.</h2>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+        
+                <button type="submit" id="send-button">Send</button>
+            </form>
+        </div>        
+    </div>    
+    
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We are a dedicated cleaning service providing top-notch cleaning solutions for homes and businesses.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'booknow' %}">Book</a></li>
+                </ul>
+            </div>
+            <img src="{% static 'Logo.png' %}" alt="Logo" class="navbar-logo">
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: cleans@subcleaners.com</p>
+                <p>Phone: +1(631) 944-2697</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SubCleaners. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
