@@ -139,5 +139,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587  
 EMAIL_USE_TLS = True  
 EMAIL_HOST_USER = 'cleans@subcleaners.com'  
-EMAIL_HOST_PASSWORD = 'ykus ynhn zfgh trle'  # Mark Needs to set this up with 2FA
+EMAIL_HOST_PASSWORD = Password
 DEFAULT_FROM_EMAIL = 'cleans@subcleaners.com'
